@@ -1,0 +1,33 @@
+@import "todo"
+@import "colors"
+
+body
+  background: $background
+
+details
+  background: $white
+  width: 50%
+  margin: auto
+  border: 2px $text-box solid
+  border-radius: 10px
+  overflow: hidden
+
+summary
+  display: flex
+  justify-content: space-between
+  padding: 14px 10px 10px 24px
+  font-size: 16px
+  cursor: pointer
+  position: relative
+
+.arrow
+  transition: transform .5s
+
+details[open] .arrow
+  transform: scale(1,-1)
+
+details[open] summary ~ *
+  animation: sweep .5s ease-in-out
+
+article
+  border-top: 1px $text-box solid

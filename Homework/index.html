@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <title>Checklist</title>
+</head>
+<body>
+<main>
+    <details>
+        <summary><img class="checklist" src="img/icons/checklist.svg">Чеклист
+            <img class="arrow" src="img/icons/arrow.svg"></summary>
+        <article>
+            <template class="task">
+                <li class="task tasks__task">
+                    <label class="task__label">
+                        <input class="task__checkbox" type="checkbox" />
+
+                        <span class="task__checkbox-custom"></span>
+                    </label>
+
+                    <p class="task__text" contenteditable></p>
+
+                    <button class="btn task__delete" type="button">
+                        Delete
+                    </button>
+                </li>
+            </template>
+
+            <div class="container">
+                <ul class="tasks"></ul>
+
+                <form class="create__task">
+                    <textarea class="create__task-textarea" placeholder="Введите задачу"></textarea>
+
+                    <button class="btn create__task-add" type="submit" disabled>
+                        Добавить задачу
+                    </button>
+                </form>
+            </div>
+        </article>
+    </details>
+</main>
+<script src="scripts/todo.js"></script>
+</body>
+</html>
